@@ -1,7 +1,9 @@
 package com.matheusfr.algafood.di.service;
 
 import com.matheusfr.algafood.di.modelo.Cliente;
+import com.matheusfr.algafood.di.notificacao.NivelUrgencia;
 import com.matheusfr.algafood.di.notificacao.Notificador;
+import com.matheusfr.algafood.di.notificacao.TipoNotificador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -11,7 +13,7 @@ import java.util.Objects;
 @Component
 public class AtivacaoClienteService {
 
-    @Qualifier("sms")
+    @TipoNotificador(NivelUrgencia.URGENTE)
     @Autowired//(required = false)
     private Notificador notificador;
 
