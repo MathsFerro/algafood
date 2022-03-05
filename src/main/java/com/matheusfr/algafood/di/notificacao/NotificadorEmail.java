@@ -1,10 +1,8 @@
 package com.matheusfr.algafood.di.notificacao;
 
 import com.matheusfr.algafood.di.modelo.Cliente;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Profile("prod")
 @TipoNotificador(NivelUrgencia.URGENTE)
 @Component
 public class NotificadorEmail implements Notificador {
