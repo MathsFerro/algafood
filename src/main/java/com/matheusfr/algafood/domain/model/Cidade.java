@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Cozinha {
+public class Cidade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,5 +16,7 @@ public class Cozinha {
     private Long id;
     @Column(nullable = false)
     private String nome;
+    @ManyToOne
+    private Estado estado;
 
 }
